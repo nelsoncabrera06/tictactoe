@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+	<title>Tic-Tac-Toe</title>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<link rel="stylesheet" type="text/css" href="css/styles.css" >
+</head>
+<body>
+    
+    <div class="container">
+        <h1>Tic-Tac-Toe</h1>
+
+        <div class="team" id="team">
+            <p>Choose your team:</p>
+            <input type="radio" name="team" value="x" id="team_x" checked = "true" onclick="tocheck(this)">X</input>
+            <input type="radio" name="team" value="o" id="team_o" onclick="tocheck(this)">O</input>
+            <p>(x moves first)</p>
+            <input type="button" value="Start" onclick="start()">
+        </div>
+        
+        <input type="button" id="reset" value="Reset" onclick="Reset()" style="display: none;">
+        <br>
+
+        <div class="board">
+            <div class="box" id="box_0" onclick="show(this)"></div>
+            <div class="box" id="box_1" onclick="show(this)"></div>
+            <div class="box" id="box_2" onclick="show(this)"></div>
+            <div class="box" id="box_3" onclick="show(this)"></div>
+            <div class="box" id="box_4" onclick="show(this)"></div>
+            <div class="box" id="box_5" onclick="show(this)"></div>
+            <div class="box" id="box_6" onclick="show(this)"></div>
+            <div class="box" id="box_7" onclick="show(this)"></div>
+            <div class="box" id="box_8" onclick="show(this)"></div>
+        </div>
+
+        <p id="output" class="output"></p>
+
+    </div>  
+        
+    
+    
+
+</body>
+<script src="tictactoe.js"></script>
+
+</html>
