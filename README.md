@@ -24,4 +24,4 @@ This is my version of:
 
 https://youtu.be/wklBwKqt-Z4
 
-[![IMAGE ALT TEXT HERE](https://img.youtube.com/vi/s2HfdZp7S-w/0.jpg)](https://youtu.be/wklBwKqt-Z4)
+[![IMAGE ALT TEXT HERE](https://img.youtube.com/vi/wklBwKqt-Z4/0.jpg)](https://youtu.be/wklBwKqt-Z4)
