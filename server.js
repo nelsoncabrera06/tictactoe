@@ -16,16 +16,36 @@ app.get('/', (req, res) => {
 });
 
 http.listen(PORT, () => {
-	console.log("server.js active");
-	if (networkInterfaces['Ethernet 2']){
-		IP_private_ETH = networkInterfaces['Ethernet 2'][2].address	
-		console.log("IP_private_ETH : "+ IP_private_ETH);
-	}
-	
-	IP_private_WiFi = networkInterfaces['Wi-Fi'][1].address			// Home Wifi 
+    var OS, IP_private_WiFi, IP_private_ETH;
+    console.log("server.js active");
+    
+    switch(process.platform) { // identify the OS
+        case 'darwin':
+            OS = 'macOS';
+            console.log(OS);
+            IP_private_WiFi = networkInterfaces.en0[2].address
+            //console.log();
+            break;
+        case 'win32':
+            OS = 'Windows';
+            console.log(OS);
+
+            if (networkInterfaces['Ethernet 2']){
+                IP_private_ETH = networkInterfaces['Ethernet 2'][2].address	
+                console.log("IP_private_ETH : "+ IP_private_ETH);
+            }
+            
+            IP_private_WiFi = networkInterfaces['Wi-Fi'][1].address			// Home Wifi 
+            
+            break;
+        default:
+          // code block
+      }
+    
+    
 	console.log("IP_private_WiFi : "+ IP_private_WiFi);
 	console.log("PORT : "+ PORT);
-    console.log('The server is working on http://localhost:' + PORT);
+    	console.log('The server is working on http://localhost:' + PORT);
     
     
 });
