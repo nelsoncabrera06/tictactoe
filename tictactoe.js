@@ -84,7 +84,7 @@ function show(box_element){
     }else{
         
         if( status == 'DRAW' || status == 'X_WON' || status == 'O_WON' ){
-            alert("Plase reset the game");
+            alert("Please reset the game");
         }else{
             box = box_element.id[4]; // example: box_0 --> 0 ; box_1 --> 1
             if(board[box]=='-'){
